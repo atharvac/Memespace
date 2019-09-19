@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+  <article class="media content-section">
+    <div class="media-body">
+      <h1>Welcome to Round 1 Of Memespace</h1>
+      <h3>Rules:</h3>
+      <p class="article-content">
+        1. Registration Fee: Rs.50 per head.<br>
+        2. Number of members in a team should not exceed 2.<br>
+        3. The event will be of two rounds.<br>
+        4. Round 1: Identify the memes and enter the missing text.<br>
+        5. The score will be decided by checking the number of words guessed correctly.<br>
+        6. The teams with highest scores will qualify for round 2.<br>
+        7. Round 2: Create memes based on a given domain.<br>
+        8. The memes which are created will be judged based on relevance to the given<br>
+           domain, creativity, and the meme format used.<br>
+        9. The winner(s) will get cash prize of Rs.1250.<br>
+        10. The runner up will get cash prize of Rs.750.<br>
+      </p>
+    </div>
+  </article>
+{% endblock content %}
+
+{% block c2 %}
+  {% if current_user.is_authenticated %}
+    <div class="col-md-4">
+      <div class="content-section">
+        <p class="text-muted">Please got to Round 1</p>
+      </div>
+    </div>
+  {% else %}
+    <div class="col-md-4">
+      <div class="content-section">
+        <p class="text-muted">Please Log in to continue</p>
+      </div>
+    </div>
+  {% endif %}
+
+
+</div>
+{% endblock %}
