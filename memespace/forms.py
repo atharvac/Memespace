@@ -50,3 +50,4 @@ class MemeForm(FlaskForm):
     content1 = TextAreaField('Caption 1', validators=[DataRequired()])
     content2 = TextAreaField('Caption 2')
     submit = SubmitField('Next')
+    submit1 = SubmitField('Back')

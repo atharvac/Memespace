@@ -3,9 +3,6 @@
 <title>MemeSpace-Round 1</title>
 
 
-
-
-
 <main role="main" class="container">
       <div class="row">
         <div class="col-md-10">
@@ -40,9 +37,13 @@
             {{ form.content2(class="form-control form-control-lg") }}
         {% endif %}
     </div>
-    <div class="form-group col-md-10 center-block">
+    <div class="form-group col-md-8 center-block">
+        {{form.submit1(class="btn btn-info")}}
+    </div>
+    <div class="form-group col-md-4 center-block">
         {{form.submit(class="btn btn-info")}}
     </div>
+
 </form>
       </div>
 </main>

@@ -108,9 +108,11 @@ def round1():
         db.session.add(resp)
         db.session.commit()
         flash('Response Recorded')
-        if CURRENT < NO_OF_MEMES:
+        if form.submit.data and CURRENT < NO_OF_MEMES:
             CURRENT += 1
             return render_template('round1.html', title='Round 1', meme_images=meme_images[CURRENT-1], form=form)
+        elif form.submit1.data and CURRENT > 1:
+            CURRENT -= 1
         else:
             CURRENT = 0
             return redirect(url_for('account'))
